@@ -1,0 +1,72 @@
+* {
+    font-size: 17px;
+}
+.signIn--wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: #56536c;
+    /* background-color: red; */
+}
+.close__button {
+    width: 58px;
+    height: 5px;
+    background-color: #a4a3b9;
+    border-radius: 25px;
+    margin-bottom: 15px;
+}
+.signIn__body {
+    display: flex;
+    flex-direction: column;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    width: 100%;
+    align-items: center;
+    background-color: #f3f3f8;
+}
+.brandLogo {
+    width: 85px;
+    height: 85px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.welcome {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+.loginField {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.fbLogin,
+.gLogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 135px;
+    height: 47px;
+    border-radius: 25px;
+    background-color: #fff;
+    margin: 10px;
+    border-width: 2px;
+    border-color: #cccccf;
+    box-shadow: 0px 1px 0px 0px #cccccf;
+}
+.facebookIcon {
+    width: 52px;
+    height: 52px;
+}
+.googleIcon {
+    width: 23px;
+    height: 23px;
+}
+.signIn__footer {
+    padding-bottom: 30px;
+}
+.brandName {
+    font-weight: bold;
+}

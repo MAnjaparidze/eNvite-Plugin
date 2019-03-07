@@ -1,0 +1,9 @@
+.pluginWindow--wrapper {
+    display: flex;
+    width: 100%;
+    background-color: #fff;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: transparent;
+}

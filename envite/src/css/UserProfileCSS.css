@@ -1,0 +1,15 @@
+.userProfile--wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: #56536c;
+}
+.close__button {
+    width: 58px;
+    height: 5px;
+    background-color: #a4a3b9;
+    border-radius: 25px;
+    margin-bottom: 15px;
+}
