@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import EnviteIcon from './components/ENviteIcon';
+import EnviteIcon from './dev/components/ENviteIcon';
 
 class App extends Component {
   render() {

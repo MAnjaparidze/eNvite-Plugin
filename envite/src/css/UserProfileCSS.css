@@ -18,6 +18,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
     width: 100%;
     background: #fff;
 }
@@ -25,6 +27,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
     width: 100%;
     background-color: #f5f4fa;
     padding-bottom: 30px;
@@ -43,17 +47,58 @@
     width: 85px;
     height: 85px;
     border-radius: 50px;
-    background-color: red;
+    /* background-color: red; */
 }
 .midSection {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
+    overflow-y: scroll;
+    max-height: 450px;
     padding-top: 10px;
 }
-.header {
+.chats__header {
     padding-top: 20px;
     padding-bottom: 20px;
+}
+.bottomSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: end;
+    width: 100%;
+    height: 75px;
+    margin-top: 100px;
+    /* background-image: url("../assets/navigationBar.png"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.userProfile__Icon,
+.userFavorites__Icon,
+.addGroup__button--wrapper--wrapper,
+.userHistory__Icon,
+.userSettings__Icon {
+    background: none;
+    border: none;
+    margin-bottom: 10px;
+    height: 100%;
+    flex: 1;
+}
+.userProfile__Icon,
+.userFavorites__Icon {
+    -webkit-box-shadow: 0px -4px 3px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: 0px -4px 3px rgba(50, 50, 50, 0.75);
+  box-shadow: 0px -4px 3px rgba(50, 50, 50, 0.75);
+}
+.addGroup__button--wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    box-shadow: 0px 20px 15px -2px #a6a2dc;
+    background-image: linear-gradient(135deg, rgb(90, 99, 216), rgb(205, 144, 225))
 }

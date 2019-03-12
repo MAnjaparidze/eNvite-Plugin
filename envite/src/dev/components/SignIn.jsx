@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import '../css/SignInCSS.css';
-import EnviteIcon from '../assets/eNviteIcon.png';
-import FBIcon from '../assets/facebookIcon.png';
-import GIcon from '../assets/googleIcon.png'
+import '../../css/SignInCSS.css';
+import EnviteIcon from '../../assets/eNviteIcon.png';
+import FBIcon from '../../assets/facebookIcon.png';
+import GIcon from '../../assets/googleIcon.png'
 
 export default class SignIn extends Component {
   render() {

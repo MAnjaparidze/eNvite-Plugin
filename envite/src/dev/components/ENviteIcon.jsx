@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../css/ENviteIconCSS.css';
+import '../../css/ENviteIconCSS.css';
 import PluginWindow from './PluginWindow';
 
 export default class ENviteIcon extends Component {
