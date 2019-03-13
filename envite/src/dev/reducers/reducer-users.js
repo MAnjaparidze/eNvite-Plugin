@@ -32,6 +32,14 @@ export default function() {
             birthDate: "11.06.1998",
             thumbnail: "https://randomuser.me/api/portraits/women/60.jpg",
         },
+        {
+            id: 5,
+            firstName: "Lena",
+            lastName: "Lorens",
+            email: "lena.l@gmail.com",
+            birthDate: "11.06.1998",
+            thumbnail: "https://randomuser.me/api/portraits/women/60.jpg",
+        },
     ]
 }
 

@@ -6,37 +6,44 @@
     width: 90%;
     height: 73px;
     margin: 0 auto;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     border: 1px solid #e6e3f1;
     border-radius: 8px;
 }
-.group__icon {
+.dashboard__group__icon {
     display: flex;
     align-items: center;
     justify-content: center;
     line-height: 10px;
-    width: 45px;
-    height: 45px;
+    width: 42px;
+    height: 42px;
     margin-left: 20px;
     margin-right: 20px;
     border-radius: 50px;
-    background-image: linear-gradient(135deg, #f75868, #fcc895);
     color: #fff;
 }
-.groupInfo {
+.dashbaord__group__info {
     display: flex;
     flex-direction: column;
-    justify-content: left;
+    justify-content: center;
+    height: 100%;
 }
-.groupLetter {
-    font-size: 1.8em;
+.dashboard__group__letter {
+    font-size: 20pt;
+    margin-bottom: 5px;
+}
+.dashboard__group__icon {
+    font-weight: bold;
     margin-bottom: 8px;
 }
-.group__title{
+.dashboard__group__title{
     text-align: left;
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 17px;
 }
-.groupMembersList {
-    font-size: 0.9em;
+.dashbaord__group__members__list {
+    font-size: 10px;
+}
+.dashbaord__group__members {
+    font-size: 14px;
 }

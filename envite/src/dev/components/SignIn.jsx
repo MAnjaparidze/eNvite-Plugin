@@ -10,10 +10,10 @@ export default class SignIn extends Component {
       <div className="signIn--wrapper">
         <div className="close__button"></div>
         <div className="signIn__body">
-          <img src={EnviteIcon} className="brandLogo"></img>
-          <h1 className="welcome">Hello.</h1>
-          <span>To start the Online Mall mood with your</span>
-          <span>friends you must be connected.</span>
+          <img src={EnviteIcon} className="signIn__brandLogo"></img>
+          <h1 className="signIn__welcome">Hello.</h1>
+          <span className="signIn__description">To start the Online Mall mood with your</span>
+          <span className="signIn__description">friends you must be connected.</span>
           <div className="loginField">
             <div className="fbLogin">
               <img src={FBIcon} className="facebookIcon" />
@@ -23,7 +23,7 @@ export default class SignIn extends Component {
             </div>
           </div>
           <div className="signIn__footer">
-            Powered by <span className="brandName">eNvite</span>
+            Powered by <span className="signIn__brandName">eNvite</span>
           </div>
         </div>
       </div>

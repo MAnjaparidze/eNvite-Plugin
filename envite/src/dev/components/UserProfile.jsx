@@ -12,39 +12,41 @@ import GroupAddIcon from '../../assets/group2Copy.png';
 
 class UserProfile extends Component {
 
+    createGroupsDiv(){
+        return this.props.groups.map((group) => {
+            return <GroupItem key={group.id} groupLetterColor={group.groupLetterColor} groupTitle={group.title} groupMembers={group.members} />
+        });
+    }
+
     render() {
         return (
-            <div className="userProfile--wrapper">
+            <div className="dashboard__userProfile--wrapper">
                 <div className="close__button"></div>
-                <div className="userProfile__body">
-                    <div className="topSection">
-                        <div className="userImage--wrapper">
-                            <img className="userImage" src="https://randomuser.me/api/portraits/women/49.jpg"></img>
+                <div className="dashboard__userProfile__body">
+                    <div className="dashboard__topSection">
+                        <div className="dashboard__userImage__wrapper">
+                            <img className="dashboard__userImage" src="https://randomuser.me/api/portraits/women/49.jpg"></img>
                         </div>
 
-                        <h1 className="welcome">Welcome Nina.</h1>
-                        <span>you're Almost ready to start your</span>
-                        <span>shopping date.</span>
+                        <span className="dashboard__welcome">Welcome Nina.</span>
+                        <span className="dashboard__moto">you're Almost ready to start your</span>
+                        <span className="dashboard__moto">shopping date.</span>
 
                     </div>
 
-                    <h2 className="chats__header">Shopiqa Chats</h2>
-                    <div className="midSection">
-                        <GroupItem />
-                        <GroupItem />
-                        <GroupItem />
+                    <h2 className="dashboard__chats__header">Shopiqa Chats</h2>
+                    <div className="dashboard__midSection">
+                        {this.createGroupsDiv()}
                     </div>
 
-                    <div className="bottomSection">
-                        <button className="userProfile__Icon"><img src={UserIcon}></img></button>
-                        <button className="userFavorites__Icon"> <img src={FavoriteIcon}></img></button>
-                        <div className="addGroup__button--wrapper--wrapper">
+                    <div className="dashboard__bottomSection">
+                        <button className="dashboard__userProfile__Icon"><img src={UserIcon}></img></button>
+                        <button className="dashboard__userFavorites__Icon"> <img src={FavoriteIcon}></img></button>
+                        <div className="dashboard__addGroup__button__wrapper__wrapper">
                             <div className="addGroup__button--wrapper"><img src={GroupAddIcon}/></div>
                         </div>
-                        <button className="userHistory__Icon"><img src={HistoryIcon}></img></button>
-                        <button className="userSettings__Icon"><img src={SettingsIcon}></img></button>
-
-
+                        <button className="dashboard__userHistory__Icon"><img src={HistoryIcon}></img></button>
+                        <button className="dashboard__userSettings__Icon"><img src={SettingsIcon}></img></button>
 
                     </div>
 
@@ -56,7 +58,8 @@ class UserProfile extends Component {
 
 function mapStateToProps(state) {
     return {
-        users: state.users[0]
+        groups: state.groups,
+        users: state.users
     }
 }
 

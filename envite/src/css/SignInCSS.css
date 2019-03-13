@@ -8,11 +8,10 @@
     align-items: center;
     width: 100%;
     color: #56536c;
-    /* background-color: red; */
 }
 .close__button {
-    width: 58px;
-    height: 5px;
+    width: 60px;
+    height: 6px;
     background-color: #a4a3b9;
     border-radius: 25px;
     margin-bottom: 15px;
@@ -26,15 +25,19 @@
     align-items: center;
     background-color: #f3f3f8;
 }
-.brandLogo {
-    width: 85px;
-    height: 85px;
-    margin-top: 15px;
+.signIn__brandLogo {
+    width: 90px;
+    height: 90px;
+    margin-top: 25px;
     margin-bottom: 15px;
 }
-.welcome {
-    font-size: 20px;
+.signIn__welcome {
+    font-size: 32px;
     margin-bottom: 10px;
+}
+.signIn__description {
+    font-size: 17px;
+    opacity: 0.9;
 }
 .loginField {
     display: flex;
@@ -47,14 +50,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 135px;
-    height: 47px;
+    width: 140px;
+    height: 52px;
     border-radius: 25px;
     background-color: #fff;
-    margin: 10px;
+    margin: 20px 10px 20px 10px;
     border-width: 2px;
     border-color: #cccccf;
-    box-shadow: 0px 1px 0px 0px #cccccf;
+    box-shadow: -1px 2px 2px 0px #cccccfa8;
 }
 .facebookIcon {
     width: 52px;
@@ -66,7 +69,9 @@
 }
 .signIn__footer {
     padding-bottom: 30px;
+    font-size: 16px;
 }
-.brandName {
+.signIn__brandName {
     font-weight: bold;
+    font-size: 14px;
 }

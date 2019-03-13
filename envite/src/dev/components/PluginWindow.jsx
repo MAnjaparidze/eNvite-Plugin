@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import '../../css/PluginWindowCSS.css';
-import SignIn from './SignIn';
 import UserProfile from './UserProfile';
+import SignIn from './SignIn';
+import NewGroup from './NewGroup';
+import Group from './Group';
 
 export default class PluginWindow extends Component {
   render() {
@@ -9,6 +11,8 @@ export default class PluginWindow extends Component {
       <div className="pluginWindow--wrapper">
         {/* <SignIn /> */}
         <UserProfile />
+        {/* <NewGroup /> */}
+        {/* <Group /> */}
       </div>
     )
   }
