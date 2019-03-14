@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import "../../../css/groupChat/GroupChatCSS.css";
 import '../../../css/groupChat/GroupSettingsCSS.css';
+import GroupMember from './GroupMember';
 
 import CloseButton from '../parts/CloseButton';
 import BurgerMenuIcon from '../../../assets/group2Copy2.png';
 import CloseIcon from '../../../assets/nounClose2043081000000Copy.png';
 import DeleteIcon from '../../../assets/nounDelete2025414000000.png';
+import AddIcon from '../../../assets/group3.png';
 
 export default class GroupChat extends Component {
     render() {
@@ -25,16 +27,24 @@ export default class GroupChat extends Component {
                         <span className="groupChatSettings__midSection__firstDiv__text">
                             It's all about the bag
                         </span>
-                        <i className="fas fa-chevron-right groupChatSettings__midSection__firstDiv__goTo__icon"></i>
+                        <i className="fas fa-chevron-right groupChatSettings__midSection__goTo__icon"></i>
                     </div>
-                    <h2></h2>
-                    <div>
-                        <div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
+
+                    <div className="groupChatSettings__membersCount">3 Participants</div>
+                    <div className="groupChatSettings__membersList__container">
+                        <div className="groupChatSettings__membersList">
+                            <GroupMember />
+                            <GroupMember />
+                            <GroupMember />
                         </div>
-                        <div></div>
+
+                        <button className="groupChatSettings__addMemberBtn__container">
+                            <div className="groupChatSettings__addMemberBtn__icon">
+                                <img src={AddIcon} alt="" />
+                            </div>
+                            <span className="groupChatSettings__addMemberBtn__text">Add Participants</span>
+                        </button>
+
                     </div>
 
                 </div>

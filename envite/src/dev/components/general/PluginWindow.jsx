@@ -5,6 +5,7 @@ import SignIn from './SignIn';
 import NewGroupChat from '../groupChat/NewGroupChat';
 import GroupChat from '../groupChat/GroupChat';
 import GroupSettings from '../groupChat/GroupSettings';
+import AddParticipants from '../groupChat/AddParticipants';
 
 export default class PluginWindow extends Component {
   render() {
@@ -14,7 +15,8 @@ export default class PluginWindow extends Component {
         {/* <UserProfile /> */}
         {/* <NewGroupChat /> */}
         {/* <GroupChat /> */}
-        <GroupSettings />
+        {/* <GroupSettings /> */}
+        <AddParticipants />
       </div>
     )
   }
