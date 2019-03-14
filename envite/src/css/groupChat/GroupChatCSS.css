@@ -1,43 +1,41 @@
-.group__container {
+.groupChat__container {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    /* height: 445px; */
 }
-.group__topSection {
+.groupChat__topSection {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    
     width: 100%;
     height: 65px;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     background-image: linear-gradient(90deg, #5863d5, #c991df);
 }
-.group__menu {
+.groupChat__menu {
     margin-left: 0;
     margin-right: auto;
     background: none;
     border: none;
     padding-left: 20px;
 }
-.group__title {
+.groupChat__title {
     margin: auto auto;
     color: #fff;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: bold;
 }
-.group__header {
+.groupChat__header {
     font-size: 20px;
     font-weight: bolder;
 }
-.group__description {
+.groupChat__description {
     font-size: 16px;
 }
-.group__settings {
+.groupChat__settings {
     margin-left: auto;
     margin-right: 0;
     background: none;
@@ -45,22 +43,69 @@
     padding-right: 20px;
     color: #fff;
 }
-.group__midSection {
+.groupChat__midSection {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    height: 280px;
+    padding-top: 20px;
+    height: 260px;
+    overflow-y: scroll;
     width: 100%;
     color: #474456;
     background-color: #f5f4fa;
 }
-.group__socialNetwork__container {
+
+.groupChat__botSection {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    background-color: #eae8f2;
+}
+.message__input__field__container {
+    text-align: left;
+    width: 80%;
+    margin-left: 20px;
+    height: 30px;
+    border-radius: 50px;
+    border: none;
+    box-shadow: 0px 1px 2px 0px #47445636;
+    background-color: #fff;
+}
+.send__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    background-image: linear-gradient(135deg, rgb(90, 99, 216), rgb(205, 144, 225));
+    border-radius: 50px;
+    border: none;
+    margin-left: 10px;
+}
+.send__btn__icon {
+    margin-left: 3px;
+}
+.newGroupChat__midSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    height: 260px;
+    overflow-y: scroll;
+    width: 100%;
+    color: #474456;
+    background-color: #f5f4fa;
+}
+.groupChat__socialNetwork__container {
     display: flex;
     flex-direction: row;
     margin-top: 10px;
 }
-.group__socialNetwork__wrapper {
+.groupChat__socialNetwork__wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -88,37 +133,4 @@
 .facebook__logo {
     font-size: 22px;
     color: #3d5aa7;
-}
-.group__botSection {
-    display: flex;
-    flex-direction: row;
-    justify-items: center;
-    align-items: center;
-    height: 70px;
-    width: 100%;
-    background-color: #eae8f2;
-}
-.message__input__field__container {
-    text-align: left;
-    width: 80%;
-    margin-left: 20px;
-    height: 30px;
-    border-radius: 50px;
-    border: none;
-    box-shadow: 0px 1px 2px 0px #47445636;
-    background-color: #fff;
-}
-.send__btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 32px;
-    height: 32px;
-    background-image: linear-gradient(135deg, rgb(90, 99, 216), rgb(205, 144, 225));
-    border-radius: 50px;
-    border: none;
-    margin-left: 10px;
-}
-.send__btn__icon {
-    margin-left: 3px;
 }

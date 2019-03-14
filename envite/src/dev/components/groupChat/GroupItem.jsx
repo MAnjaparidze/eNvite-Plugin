@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../../css/GroupItemCSS.css';
+import '../../../css/groupChat/GroupItemCSS.css';
 
 
 

@@ -1,0 +1,58 @@
+.userFriendMessage__container__wrapper {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.userFriendMessage__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    max-width: 250px;
+    border-radius: 12px;
+    background-color: #fff;
+    margin-right: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    box-shadow: 0px 2px 0px 0px #46464a17;
+}
+.userFriendMessage__content__container {
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    padding-left: 10px;
+}
+.userFriendMessage__friendName {
+    color: #2c8df7;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: left;
+}
+.userFriendMessage__textField {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: auto;
+    color: #46464a;
+    margin-right: 20px;
+    font-size: 15px;
+    padding: 2px;
+}
+.userFriendMessage__userImg__wrapper {
+    display: flex;
+    align-items: center;
+    width: 20%;
+    height: 100%;
+    margin: 0 auto;
+}
+.userFriendMessage__userImg {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    background-color: #fff;
+    margin-left: 5px;
+}

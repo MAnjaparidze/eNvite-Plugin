@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import EnviteIcon from './dev/components/ENviteIcon';
+import EnviteIcon from './dev/components/general/ENviteIcon';
 
 class App extends Component {
   render() {

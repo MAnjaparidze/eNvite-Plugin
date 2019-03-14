@@ -1,0 +1,47 @@
+.groupChatSettings__close {
+    margin-left: auto;
+    margin-right: 0;
+    background: none;
+    border: none;
+    padding-right: 20px;
+    color: #fff;
+}
+.groupChatSettings__close__icon {
+    width: 14px;
+    height: 14px;
+}
+.groupChatSettings__midSection {
+    height: 200px;
+    background-color: #f5f4fa;
+    width: 100%;
+}
+.groupChatSettings__botSection {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    background-color: #fff;
+}
+.groupChatSettings__deleteBtn__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: none;
+    color: #fc1243;
+    background-color: transparent;
+    margin-left: 10px;
+}
+.groupChatSettings__deleteBtn__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    background-color: #fc1243;
+}
+.groupChatSettings__deleteBrn__text {
+    font-size: 15px;
+    margin-left: 10px;
+}

@@ -1,0 +1,13 @@
+.burger__close__button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 8px;
+}
+.horizontal__line {
+    border-radius: 25px;
+    background-color: grey;
+    width: 20px;
+    margin-bottom: 3px;
+}

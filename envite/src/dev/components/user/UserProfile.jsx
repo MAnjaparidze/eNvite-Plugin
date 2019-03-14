@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import '../../css/UserProfileCSS.css';
+import '../../../css/user/UserProfileCSS.css';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import GroupItem from './GroupItem';
-import UserIcon from '../../assets/nounUser11228000000001.png';
-import FavoriteIcon from '../../assets/nounStar2097830000000.png';
-import HistoryIcon from '../../assets/nounHistory576599000000.png';
-import SettingsIcon from '../../assets/nounSettings1187813000000.png';
-import GroupAddIcon from '../../assets/group2Copy.png';
+import GroupItem from '../groupChat/GroupItem';
+import UserIcon from '../../../assets/nounUser11228000000001.png';
+import FavoriteIcon from '../../../assets/nounStar2097830000000.png';
+import HistoryIcon from '../../../assets/nounHistory576599000000.png';
+import SettingsIcon from '../../../assets/nounSettings1187813000000.png';
+import GroupAddIcon from '../../../assets/group2Copy.png';
 
 
 class UserProfile extends Component {
