@@ -15,6 +15,40 @@
     background-color: #f5f4fa;
     width: 100%;
 }
+.groupChatSettings__midSection__firstDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 25px 10px 20px;
+}
+.groupChatSettings__midSection__firstDiv__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: bolder;
+    margin-right: 10px;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    background-image: linear-gradient(135deg, #ecc282, #ad40db);
+}
+.groupChatSettings__midSection__firstDiv__icon > span {
+    margin-bottom: 3px;
+}
+.groupChatSettings__midSection__firstDiv__text {
+    font-weight: bold;
+}
+.groupChatSettings__midSection__firstDiv__goTo__icon {
+    margin-right: 0;
+    margin-left: auto;
+    color: rgba(128, 128, 128, 0.432);
+}
+
+
+
 .groupChatSettings__botSection {
     display: flex;
     flex-direction: row;
@@ -41,7 +75,7 @@
     border-radius: 50px;
     background-color: #fc1243;
 }
-.groupChatSettings__deleteBrn__text {
+.groupChatSettings__deleteBtn__text {
     font-size: 15px;
     margin-left: 10px;
 }
