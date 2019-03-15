@@ -3,7 +3,7 @@ import "../../../css/groupChat/GroupChatCSS.css";
 import UserMessage from '../messages/UserMessage';
 import UserFriendMessage from '../messages/UserFriendMessage';
 
-import CloseButton from '../parts/CloseButton';
+import CloseButton from '../items/CloseButton';
 import BurgerMenuIcon from '../../../assets/group2Copy2.png';
 import SettingsIcon from '../../../assets/nounSetting1050013000000.png';
 import SendIcon from '../../../assets/pathCopy.png';

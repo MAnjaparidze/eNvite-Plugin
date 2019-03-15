@@ -6,4 +6,7 @@
 .plugInIcon {
     width: 70px;
     height: 70px;
+    background-image: url('../../assets/eNviteIcon.png');
+    background-size: cover;
+    background-repeat: no-repeat;
 }

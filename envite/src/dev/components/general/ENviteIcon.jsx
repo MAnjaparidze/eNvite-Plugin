@@ -3,14 +3,12 @@ import '../../../css/general/ENviteIconCSS.css';
 import PluginWindow from './PluginWindow';
 
 export default class ENviteIcon extends Component {
-    state() {
-    }
+
     render() {
+        console.log(this.props)
         return (
-            <div className="enviteIcon--wrapper">
-                <img src='../../../assets/eNvoteIcon.png' className="plugInIcon" />
-                
-                <PluginWindow className="test" />
+            <div className="enviteIcon--wrapper" onClick={this.props.toggleWindow}>
+                <div src='../../../assets/ovalCopy.png' className="plugInIcon" />
             </div>
         )
     }

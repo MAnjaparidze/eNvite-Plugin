@@ -1,12 +1,7 @@
 import React from 'react';
 import '../../../css/groupChat/AddParticipantsCSS.css';
-import GroupMember from './GroupMember';
 
-import CloseButton from '../parts/CloseButton';
-import BurgerMenuIcon from '../../../assets/group2Copy2.png';
-import CloseIcon from '../../../assets/nounClose2043081000000Copy.png';
-import DeleteIcon from '../../../assets/nounDelete2025414000000.png';
-import AddIcon from '../../../assets/group3.png';
+import CloseButton from '../items/CloseButton';
 
 export default function AddParticipants() {
     return (

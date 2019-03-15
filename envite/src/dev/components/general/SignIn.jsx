@@ -8,7 +8,7 @@ export default class SignIn extends Component {
   render() {
     return (
       <div className="signIn--wrapper">
-        <div className="close__button"></div>
+        <div className="close__button" onClick={this.props.toggleWindow}></div>
         <div className="signIn__body">
           <img src={EnviteIcon} className="signIn__brandLogo"></img>
           <h1 className="signIn__welcome">Hello.</h1>

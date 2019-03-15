@@ -3,7 +3,12 @@
     width: 100%;
     background-color: #fff;
     position: fixed;
-    bottom: 0;
+    bottom: -1300px;
     right: 0;
     background-color: transparent;
+    transition: bottom 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+}
+.isActive {
+    bottom: 0;
 }

@@ -7,18 +7,23 @@ import GroupChat from '../groupChat/GroupChat';
 import GroupSettings from '../groupChat/GroupSettings';
 import AddParticipants from '../groupChat/AddParticipants';
 import UserBag from '../groupChat/UserBag';
+import UserSettings from '../user/UserSettings';
 
 export default class PluginWindow extends Component {
+
+  
   render() {
+    let toggle = 'pluginWindow--wrapper' + (this.props.isExpanded ? ' isActive' : '');
     return (
-      <div className="pluginWindow--wrapper">
-        {/* <SignIn /> */}
+      <div className={toggle}> 
+        <SignIn toggleWindow={this.props.toggleWindow}/>
         {/* <UserProfile /> */}
         {/* <NewGroupChat /> */}
         {/* <GroupChat /> */}
         {/* <GroupSettings /> */}
         {/* <AddParticipants /> */}
-        <UserBag />
+        {/* <UserBag /> */}
+        {/* <UserSettings /> */}
       </div>
     )
   }

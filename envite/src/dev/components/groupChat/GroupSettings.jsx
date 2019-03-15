@@ -3,7 +3,7 @@ import "../../../css/groupChat/GroupChatCSS.css";
 import '../../../css/groupChat/GroupSettingsCSS.css';
 import GroupMember from './GroupMember';
 
-import CloseButton from '../parts/CloseButton';
+import CloseButton from '../items/CloseButton';
 import BurgerMenuIcon from '../../../assets/group2Copy2.png';
 import CloseIcon from '../../../assets/nounClose2043081000000Copy.png';
 import DeleteIcon from '../../../assets/nounDelete2025414000000.png';
