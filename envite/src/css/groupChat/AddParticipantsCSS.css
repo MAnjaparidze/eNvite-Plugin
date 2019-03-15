@@ -40,6 +40,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-right: auto;
+}
+.logo__border {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 35px;
     height: 35px;
     border-radius: 50px;
@@ -49,9 +55,17 @@
 .addParticipants__socialNetwork__name {
     font-size: 15px;
     color: #535161;
-    margin: auto auto;
+    margin-left: 10px;
+}
+
+.telegram__logo {
+    margin-right: 0px;
 }
 .addParticipants__socialNetwork__goTo {
     color: #5351616b;
     font-size: 14px;
+}
+
+.addParticipants__logo {
+    font-size: 18px;
 }
