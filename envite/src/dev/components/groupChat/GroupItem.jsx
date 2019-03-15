@@ -9,7 +9,7 @@ export default class GroupItem extends Component {
     }
     generateGroupMembers() {
         return this.props.groupMembers.map((member) => {
-            return <span className="dashbaord__group__members">{member} </span> 
+            return <span className="dashbaord__group__members">{member}</span> 
         });
     }
     render() {

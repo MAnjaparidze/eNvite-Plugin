@@ -6,6 +6,7 @@ import NewGroupChat from '../groupChat/NewGroupChat';
 import GroupChat from '../groupChat/GroupChat';
 import GroupSettings from '../groupChat/GroupSettings';
 import AddParticipants from '../groupChat/AddParticipants';
+import UserBag from '../groupChat/UserBag';
 
 export default class PluginWindow extends Component {
   render() {
@@ -16,7 +17,8 @@ export default class PluginWindow extends Component {
         {/* <NewGroupChat /> */}
         {/* <GroupChat /> */}
         {/* <GroupSettings /> */}
-        <AddParticipants />
+        {/* <AddParticipants /> */}
+        <UserBag />
       </div>
     )
   }
