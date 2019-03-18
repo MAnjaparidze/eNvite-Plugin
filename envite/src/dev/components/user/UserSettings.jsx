@@ -16,19 +16,18 @@ class UserProfile extends Component {
             <div className={toggle}>
                 <div className="dashboard__userProfile__body">
                     <div className="dashboard__topSection  userProfile__topSection">
-                        <div className="dashboard__userImage__wrapper userProfile__userImage__wrapper">
-                            <img className="dashboard__userImage userProfile__userImage" src="https://randomuser.me/api/portraits/women/49.jpg"></img>
+                        <div className="userProfile__userImage__container">
+                            <div className="dashboard__userImage__wrapper userProfile__userImage__wrapper">
+                                <img className="dashboard__userImage userProfile__userImage" src="https://randomuser.me/api/portraits/women/49.jpg"></img>
+                            </div>
                             <img className="userProfile__exit" src={ExitIcon} alt="" onClick={this.props.goToProfile} />
                         </div>
 
                         <div className="userProfile__userInfo__wrapper">
                             <div className="userProfile__userInfo__name__wrapper">
                                 <div>
-
-
                                     <label for="firstName">First Name</label>
                                     <input defaultValue="Nina" id="firstName" type="text" />
-
                                 </div>
                                 <div>
 
