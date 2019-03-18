@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function BagItem() {
+export default function BagItemGenerator() {
     return (
         <div className="bagItem__container">
             <div className="bagItem__firstSection">
@@ -13,8 +13,7 @@ export default function BagItem() {
                     <span className="bagItem__price__dollars">$19</span>
                     <span className="bagItem__price__cents">90</span>
                 </div>
-                <div className="bagItem__oldPrice">
-                    <hr className="bagItem__oldPrice__diagonalLine" />
+                <div className="bagItem__oldPrice strikethrough">
                     <span className="bagItem__price__dollars">$19</span>
                     <span className="bagItem__price__cents">90</span>
                 </div>

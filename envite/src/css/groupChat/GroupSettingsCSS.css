@@ -85,6 +85,7 @@
     border-radius: 50px;
     margin-right: 10px;
     background-color: #eae8f2;
+    border: none;
 }
 .groupChatSettings__addMemberBtn__text {
     font-size: 15px;

@@ -9,13 +9,12 @@ export default class GroupItem extends Component {
     }
     generateGroupMembers() {
         return this.props.groupMembers.map((member) => {
-            return <span className="dashbaord__group__members">{member}</span> 
+            return <span key={member.id} className="dashbaord__group__members">{member} </span> 
         });
     }
     render() {
-        console.log(this.props.groupMembers.length);
         return (
-            <div className="groupTab--wrapper">
+            <div className="groupTab--wrapper" onClick={this.props.goToGroup}>
                 <div className="dashboard__group__icon" style={this.divStyle}><span className="dashboard__group__letter">{this.props.groupTitle.charAt(0).toLowerCase()}</span></div>
                 <div className="dashbaord__group__info">
                     <span className="dashboard__group__title">{this.props.groupTitle}</span>

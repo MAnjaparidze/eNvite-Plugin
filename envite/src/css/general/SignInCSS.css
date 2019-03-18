@@ -1,6 +1,7 @@
 * {
     font-size: 17px;
 }
+
 .signIn--wrapper {
     display: flex;
     flex-direction: column;
@@ -8,6 +9,15 @@
     align-items: center;
     width: 100%;
     color: #56536c;
+    position: fixed;
+    bottom: -800px;
+    transition-property: all;
+    transition-duration: .8s;
+}
+.isActive {
+    bottom: 0;
+    transition-property: all;
+	transition-duration: .8s;
 }
 .close__button {
     width: 60px;

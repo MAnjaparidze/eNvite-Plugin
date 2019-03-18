@@ -1,9 +1,9 @@
-import React from 'react';
-import '../../../css/groupChat/GroupMemberCSS.css';
+import React, { Component } from 'react'
 
-export default function GroupMember() {
+export default class GroupMember extends Component {
+  render() {
     return (
-        <div className="groupMember__container">
+        <div className="groupMember__container" onClick={this.props.groupMemberBag}>
 
             <img className="groupChatSettings__member__icon" src="https://randomuser.me/api/portraits/women/56.jpg">
 
@@ -16,4 +16,5 @@ export default function GroupMember() {
             </div>
         </div>
     )
+  }
 }
