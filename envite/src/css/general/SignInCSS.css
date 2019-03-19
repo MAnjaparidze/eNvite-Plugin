@@ -11,6 +11,7 @@
     color: #56536c;
     position: fixed;
     bottom: -800px;
+    opacity: 0;
     transition-property: all;
     transition-duration: .8s;
 }

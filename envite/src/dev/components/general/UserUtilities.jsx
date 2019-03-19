@@ -24,7 +24,7 @@ export default class SignIn extends Component {
   render() {
     let toggle = 'signIn--wrapper' + (this.props.isExpanded ? ' isActive' : '');
     return (
-      <div className={toggle}>
+      <div className={toggle} id="userUtilities__component">
         <div className="close__button" onClick={this.props.toggleWindow}></div>
         {this.renderUserUtilities()}
       </div>

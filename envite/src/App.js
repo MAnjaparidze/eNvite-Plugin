@@ -41,118 +41,235 @@ class App extends Component {
   changeInitialView() {
     if (this.state.isGroupChat) {
       return <GroupContainer
-                toggleWindow={this.handleToggle}
-                state={this.state}
-                isExpanded={this.state.isExpanded}
-                groupSettings={this.goToGroupSettings}
-                goToProfile={this.goToProfile}    
-                toGroup={this.goToGroup}
-                groupMemberBag={this.goToGroupMemberBag}
-                addMember={this.addMember}
-             />      
+        toggleWindow={this.handleToggle}
+        state={this.state}
+        isExpanded={this.state.isExpanded}
+        groupSettings={this.goToGroupSettings}
+        goToProfile={this.goToProfile}
+        toGroup={this.goToGroup}
+        groupMemberBag={this.goToGroupMemberBag}
+        addMember={this.addMember}
+      />
     }
     else {
       return <UserUtilities
-              toggleWindow={this.handleToggle}
-              state={this.state}
-              isExpanded={this.state.isExpanded}
-              addGroup={this.goToAddGroup}
-              signIn={this.signIn}
-              goToProfile={this.goToProfile}
-              goToSettings={this.goToSettings}
-              goToGroup={this.goToGroup}
-            />
+        toggleWindow={this.handleToggle}
+        state={this.state}
+        isExpanded={this.state.isExpanded}
+        addGroup={this.goToAddGroup}
+        signIn={this.signIn}
+        goToProfile={this.goToProfile}
+        goToSettings={this.goToSettings}
+        goToGroup={this.goToGroup}
+      />
     }
   }
 
+  animationGroupDisappear = () => {
+    let componentToAnimate = document.getElementById('groupChat__component');
+
+    componentToAnimate.style.opacity = 0;
+  }
+  animationGroupAppear = () => {
+    let componentToAnimate = document.getElementById('groupChat__component');
+
+    componentToAnimate.style.opacity = 1;
+  }
+  animationUserUtilDisappear = () => {
+    let componentUtilAnimate = document.getElementById('userUtilities__component');
+
+    componentUtilAnimate.style.opacity = 0;
+  }
+  animationUserUtilAppear = () => {
+    let componentUtilAnimate = document.getElementById('userUtilities__component');
+
+    componentUtilAnimate.style.opacity = 1;
+  }
+  resetUtilAnimation() {
+    let utilAnimation = document.getElementById('')
+  }
+
   goToAddGroup = () => {
-    this.setState({
-      isUserProfile: false,
-      isGroupChat: true,
-      addGroup: true,
-      groupSelected: false,
-      groupSettings: false,
-      groupMemberBag: false,
-      addMember: false
-    })
+    this.animationUserUtilDisappear();
+    setTimeout(() => {
+      this.setState({
+        isUserProfile: false,
+        isGroupChat: true,
+        addGroup: true,
+        groupSelected: false,
+        groupSettings: false,
+        groupMemberBag: false,
+        addMember: false
+      })
+    }, 500);
+    setTimeout(() => {
+      this.animationGroupAppear();
+    }, 800);
   }
 
   addMember = () => {
-    this.setState({
-      isUserProfile: false,
-      isGroupChat: true,
-      addGroup: false,
-      groupSelected: false,
-      groupSettings: false,
-      groupMemberBag: false,
-      addMember: true
-    })
+    this.animationGroupDisappear();
+    setTimeout(() => {
+      this.setState({
+        isUserProfile: false,
+        isGroupChat: true,
+        addGroup: false,
+        groupSelected: false,
+        groupSettings: false,
+        groupMemberBag: false,
+        addMember: true
+      })
+    }, 500)
+    setTimeout(() => {
+      this.animationGroupAppear();
+    }, 500)
   }
+
   goToGroup = () => {
-    this.setState({
-      isUserProfile: false,
-      isGroupChat: true,
-      addGroup: false,
-      groupSelected: true,
-      groupSettings: false,
-      groupMemberBag: false,
-      addMember: false
-    })
+    if (this.state.isUserProfile == false && this.state.isGroupChat == true) {
+      this.animationGroupDisappear();
+      alert('Thsi works')
+      setTimeout(() => {
+        this.setState({
+          isUserProfile: false,
+          isGroupChat: true,
+          addGroup: false,
+          groupSelected: true,
+          groupSettings: false,
+          groupMemberBag: false,
+          addMember: false
+        })
+      }, 500)
+      setTimeout(() => {
+        this.animationGroupAppear();
+      }, 500)
+    } else {
+      this.animationUserUtilDisappear();
+      setTimeout(() => {
+        this.setState({
+          isUserProfile: false,
+          isGroupChat: true,
+          addGroup: false,
+          groupSelected: true,
+          groupSettings: false,
+          groupMemberBag: false,
+          addMember: false
+        })
+      }, 500);
+      setTimeout(() => {
+        this.animationGroupAppear();
+      }, 500);
+    }
   }
 
   goToGroupSettings = () => {
-    this.setState({
-      addGroup: false,
-      groupSelected: false,
-      groupSettings: true,
-      groupMemberBag: false,
-      addMember: false
-    })
+    this.animationGroupDisappear();
+    setTimeout(() => {
+      this.setState({
+        addGroup: false,
+        groupSelected: false,
+        groupSettings: true,
+        groupMemberBag: false,
+        addMember: false
+      })
+    }, 500)
+    setTimeout(() => {
+      this.animationGroupAppear();
+    }, 500)
   }
 
   goToGroupMemberBag = () => {
-    this.setState({
-      addGroup: false,
-      groupSelected: false,
-      groupSettings: false,
-      groupMemberBag: true,
-      addMember: false
-    })
+    this.animationGroupDisappear();
+    setTimeout(() => {
+
+      this.setState({
+        addGroup: false,
+        groupSelected: false,
+        groupSettings: false,
+        groupMemberBag: true,
+        addMember: false
+      })
+    }, 500)
+    setTimeout(() => {
+      this.animationGroupAppear();
+    }, 500)
   }
 
   handleToggle = () => {
-    this.setState({
-      isExpanded: !this.state.isExpanded
-    })
+    if (this.state.isUserProfile == false && this.state.isGroupChat == true) {
+      this.setState({
+        isExpanded: !this.state.isExpanded
+      })
+    } else {
+      this.setState({
+        isExpanded: !this.state.isExpanded
+      })
+
+      this.animationUserUtilAppear();
+    }
   }
 
   signIn = () => {
-    this.setState({
-      isGroupChat: false,
-      showProfile: true,
-    })
+    this.animationUserUtilDisappear();
+    setTimeout(() => {
+      this.setState({
+        isGroupChat: false,
+        showProfile: true,
+      })
+    }, 500);
+    setTimeout(() => {
+      this.animationUserUtilAppear();
+    }, 500);
   }
 
   goToSettings = () => {
-    this.setState({
-      showProfile: false,
-      isSettingsClicked: true,
-    })
+    this.animationUserUtilDisappear();
+    setTimeout(() => {
+      this.setState({
+        showProfile: false,
+        isSettingsClicked: true,
+      })
+    }, 500)
+    setTimeout(() => {
+      this.animationUserUtilAppear();
+    }, 500)
   }
 
   goToProfile = () => {
-    this.setState({
-      isSettingsClicked: false,
-      showProfile: true,
-      isGroupChat: false,
-      addGroup: false,
-      groupSelected: false,
-      groupSettings: false,
-      addMember: false
-    })
+    if (this.state.isUserProfile == false && this.state.isGroupChat == true) {
+      this.animationGroupDisappear();
+      setTimeout(() => {
+        this.setState({
+          isSettingsClicked: false,
+          showProfile: true,
+          isGroupChat: false,
+          addGroup: false,
+          groupSelected: false,
+          groupSettings: false,
+          addMember: false
+        })
+      }, 500);
+      setTimeout(() => {
+        this.animationUserUtilAppear();
+      }, 500);
+    } else {
+      this.animationUserUtilDisappear();
+      setTimeout(() => {
+        this.setState({
+          isSettingsClicked: false,
+          showProfile: true,
+          isGroupChat: false,
+          addGroup: false,
+          groupSelected: false,
+          groupSettings: false,
+          addMember: false
+        })
+      }, 500);
+      setTimeout(() => {
+        this.animationUserUtilAppear();
+      }, 500);
+    }
   }
-
-
 
   render() {
     return (

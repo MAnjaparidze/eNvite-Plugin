@@ -5,6 +5,7 @@
     width: 100%;
     position: fixed;
     bottom: 0;
+    opacity: 0;
     transition-property: all;
     transition-duration: .8s;
 }
@@ -52,7 +53,6 @@
     color: #fff;
 }
 .groupChat__midSection {
-    overflow-y: scroll;
     width: 100%;
     color: #474456;
     background-color: #f5f4fa;
