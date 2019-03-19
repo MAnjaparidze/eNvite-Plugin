@@ -73,6 +73,9 @@
     background-color: #eae8f2;
 }
 .message__input__field__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: left;
     width: 80%;
     margin-left: 20px;
@@ -81,6 +84,10 @@
     border: none;
     box-shadow: 0px 1px 2px 0px #47445636;
     background-color: #fff;
+}
+.message__input__field {
+    width: 90%;
+    border: none;
 }
 .send__btn {
     display: flex;

@@ -81,7 +81,6 @@ export default class GroupChat extends Component {
     }
 
     render() {
-        console.log(this.props.toggleWindow)
         let toggle = "groupChat__container" + (this.props.isExpanded ? ' ' : ' isDisabled')
         return (
             <div id="groupChat__component" className={toggle}>

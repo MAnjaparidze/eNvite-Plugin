@@ -13,7 +13,7 @@ class UserProfile extends Component {
     render() {
         let toggle = 'dashboard__userProfile--wrapper' + (this.props.isExpanded ? ' isActive' : '');
         return (
-            <div className={toggle}>
+            <div className={toggle} id="userSettings__component">
                 <div className="dashboard__userProfile__body">
                     <div className="dashboard__topSection  userProfile__topSection">
                         <div className="userProfile__userImage__container">
@@ -30,10 +30,8 @@ class UserProfile extends Component {
                                     <input defaultValue="Nina" id="firstName" type="text" />
                                 </div>
                                 <div>
-
                                     <label for="lastName">Last Name</label>
                                     <input defaultValue="Lorens" id="lastName" type="text" />
-
                                 </div>
                             </div>
 
@@ -47,7 +45,6 @@ class UserProfile extends Component {
                             <div className="userProfile__userInfo__birthDate__wrapper">
                                 <label for="birthDate">Birth Date</label>
                                 <input defaultValue="11.06.1998" id="birthDate" type="text" />
-
                             </div>
                         </div>
                     </div>

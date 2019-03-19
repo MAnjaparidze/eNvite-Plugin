@@ -7,7 +7,7 @@ import GIcon from '../../../assets/googleIcon.png'
 export default class SignInComponent extends Component {
   render() {
     return (
-        <div className="signIn__body">
+        <div className="signIn__body" id='signIn__component'>
             <img src={EnviteIcon} className="signIn__brandLogo"></img>
             <h1 className="signIn__welcome">Hello.</h1>
             <span className="signIn__description">To start the Online Mall mood with your</span>

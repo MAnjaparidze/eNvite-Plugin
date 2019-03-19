@@ -14,6 +14,7 @@ import './css/user/UserProfileCSS.css'
 import './App.css';
 import './css/groupChat/UserBagCSS.css'
 import './css/user/UserSettingsCSS.css'
+import './css/general/ResponsiveCSS.css'
 
 import EnviteIcon from './dev/components/general/ENviteIcon';
 import UserProfile from './dev/components/user/UserProfile';
@@ -21,7 +22,10 @@ import UserUtilities from './dev/components/general/UserUtilities';
 import GroupContainer from './dev/components/groupChat/GroupRootComponent';
 import UserSettings from './dev/components/user/UserSettings';
 
+
+
 class App extends Component {
+
   constructor(props) {
     super(props)
     this.state = {
@@ -67,26 +71,31 @@ class App extends Component {
 
   animationGroupDisappear = () => {
     let componentToAnimate = document.getElementById('groupChat__component');
-
+    console.log(componentToAnimate)
     componentToAnimate.style.opacity = 0;
   }
+
   animationGroupAppear = () => {
     let componentToAnimate = document.getElementById('groupChat__component');
 
     componentToAnimate.style.opacity = 1;
   }
+
   animationUserUtilDisappear = () => {
     let componentUtilAnimate = document.getElementById('userUtilities__component');
 
     componentUtilAnimate.style.opacity = 0;
   }
+
   animationUserUtilAppear = () => {
     let componentUtilAnimate = document.getElementById('userUtilities__component');
 
     componentUtilAnimate.style.opacity = 1;
   }
-  resetUtilAnimation() {
-    let utilAnimation = document.getElementById('')
+
+  animationSignInAppear = () => {
+    let animationComponent = document.getElementById('signIn__component');
+    animationComponent.style.opacity = 1;
   }
 
   goToAddGroup = () => {
@@ -101,10 +110,10 @@ class App extends Component {
         groupMemberBag: false,
         addMember: false
       })
-    }, 500);
+    }, 100);
     setTimeout(() => {
       this.animationGroupAppear();
-    }, 800);
+    }, 150);
   }
 
   addMember = () => {
@@ -119,16 +128,15 @@ class App extends Component {
         groupMemberBag: false,
         addMember: true
       })
-    }, 500)
+    }, 100)
     setTimeout(() => {
       this.animationGroupAppear();
-    }, 500)
+    }, 150)
   }
 
   goToGroup = () => {
     if (this.state.isUserProfile == false && this.state.isGroupChat == true) {
       this.animationGroupDisappear();
-      alert('Thsi works')
       setTimeout(() => {
         this.setState({
           isUserProfile: false,
@@ -139,10 +147,10 @@ class App extends Component {
           groupMemberBag: false,
           addMember: false
         })
-      }, 500)
+      }, 100)
       setTimeout(() => {
         this.animationGroupAppear();
-      }, 500)
+      }, 150)
     } else {
       this.animationUserUtilDisappear();
       setTimeout(() => {
@@ -155,10 +163,10 @@ class App extends Component {
           groupMemberBag: false,
           addMember: false
         })
-      }, 500);
+      }, 100);
       setTimeout(() => {
         this.animationGroupAppear();
-      }, 500);
+      }, 150);
     }
   }
 
@@ -172,10 +180,10 @@ class App extends Component {
         groupMemberBag: false,
         addMember: false
       })
-    }, 500)
+    }, 100)
     setTimeout(() => {
       this.animationGroupAppear();
-    }, 500)
+    }, 150)
   }
 
   goToGroupMemberBag = () => {
@@ -189,10 +197,10 @@ class App extends Component {
         groupMemberBag: true,
         addMember: false
       })
-    }, 500)
+    }, 100)
     setTimeout(() => {
       this.animationGroupAppear();
-    }, 500)
+    }, 150)
   }
 
   handleToggle = () => {
@@ -201,12 +209,17 @@ class App extends Component {
         isExpanded: !this.state.isExpanded
       })
     } else {
-      this.setState({
-        isExpanded: !this.state.isExpanded
-      })
-
+      setTimeout(() => {
+        this.setState({
+          isExpanded: !this.state.isExpanded
+        })
+      }, 100);
+      setTimeout(() => {
+        this.disableScroll();
+      }, 150);
       this.animationUserUtilAppear();
     }
+
   }
 
   signIn = () => {
@@ -216,23 +229,24 @@ class App extends Component {
         isGroupChat: false,
         showProfile: true,
       })
-    }, 500);
+    }, 100);
     setTimeout(() => {
       this.animationUserUtilAppear();
-    }, 500);
+    }, 150);
   }
 
   goToSettings = () => {
     this.animationUserUtilDisappear();
+
     setTimeout(() => {
       this.setState({
         showProfile: false,
         isSettingsClicked: true,
       })
-    }, 500)
+    }, 100)
     setTimeout(() => {
       this.animationUserUtilAppear();
-    }, 500)
+    }, 150)
   }
 
   goToProfile = () => {
@@ -248,10 +262,10 @@ class App extends Component {
           groupSettings: false,
           addMember: false
         })
-      }, 500);
+      }, 100);
       setTimeout(() => {
         this.animationUserUtilAppear();
-      }, 500);
+      }, 150);
     } else {
       this.animationUserUtilDisappear();
       setTimeout(() => {
@@ -264,22 +278,34 @@ class App extends Component {
           groupSettings: false,
           addMember: false
         })
-      }, 500);
+      }, 100);
       setTimeout(() => {
         this.animationUserUtilAppear();
-      }, 500);
+      }, 150);
+    }
+  }
+
+  disableScroll = () => {
+    let appBody = document.body;
+    let appHTML = document.documentElement;
+    appBody.classList.add("scrollDisabled");
+    appHTML.classList.add("scrollDisabled");
+    if (this.state.isExpanded == false) {
+      appBody.classList.remove("scrollDisabled");
+      appHTML.classList.remove("scrollDisabled");
     }
   }
 
   render() {
     return (
-      <div className="App">
+      <div className="App" id="app">
 
         <div className="plugin__wrapper">
 
           <EnviteIcon toggleWindow={this.handleToggle} />
 
           {this.changeInitialView()}
+
         </div>
 
 

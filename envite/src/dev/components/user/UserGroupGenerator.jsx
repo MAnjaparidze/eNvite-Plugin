@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import '../../../css/groupChat/GroupItemCSS.css';
 
 
-
 export default class GroupItem extends Component {
     divStyle = {
         backgroundImage: this.props.groupLetterColor,
@@ -13,8 +12,9 @@ export default class GroupItem extends Component {
         });
     }
     render() {
+
         return (
-            <div className="groupTab--wrapper" onClick={this.props.goToGroup}>
+            <div className="groupTab--wrapper" key={this.props.itemKey} onClick={this.props.goToGroup}>
                 <div className="dashboard__group__icon" style={this.divStyle}><span className="dashboard__group__letter">{this.props.groupTitle.charAt(0).toLowerCase()}</span></div>
                 <div className="dashbaord__group__info">
                     <span className="dashboard__group__title">{this.props.groupTitle}</span>

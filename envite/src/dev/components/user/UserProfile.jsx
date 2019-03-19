@@ -8,22 +8,22 @@ import FavoriteIcon from '../../../assets/nounStar2097830000000.png';
 import HistoryIcon from '../../../assets/nounHistory576599000000.png';
 import SettingsIcon from '../../../assets/nounSettings1187813000000.png';
 import GroupAddIcon from '../../../assets/group2Copy.png';
+import StartNewJourneyIcon from '../../../assets/startNewJourneyArrow.png'
 
 
 class UserProfile extends Component {
-
-    createGroupsDiv() {
+    createGroupsDiv = () => {
         return this.props.groups.map((group) => {
-            return <GroupItem 
-                        key={group.id} 
-                        groupLetterColor={group.groupLetterColor} 
-                        groupTitle={group.title} groupMembers={group.members} 
-                        goToGroup={this.props.goToGroup}
-                    />
+            return <GroupItem
+                itemKey={group.id}
+                groupLetterColor={group.groupLetterColor}
+                groupTitle={group.title} groupMembers={group.members}
+                goToGroup={this.props.goToGroup}
+            />
         });
     }
 
-
+   
     render() {
         return (
             <div className="dashboard__userProfile__body">
@@ -41,6 +41,11 @@ class UserProfile extends Component {
                 <h2 className="dashboard__chats__header">Shopiqa Chats</h2>
                 <div className="dashboard__midSection">
                     {this.createGroupsDiv()}
+                </div>
+                <div className="dashboard__startNewJourney">
+                    <span className="dashboard__startNewJourney__description">New Shopping</span>
+                    <span className="dashboard__startNewJourney__description">Journey</span>
+                    <img className="dashboard__startNewJourney__arrow" src={StartNewJourneyIcon} alt="" />
                 </div>
 
                 <div className="dashboard__bottomSection">
