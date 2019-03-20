@@ -1,4 +1,10 @@
 import React, { Component } from 'react';
+import {
+  BrowserView,
+  MobileView,
+  isBrowser,
+  isMobile
+} from "react-device-detect";
 
 import './css/general/ENviteIconCSS.css'
 import './css/general/SignInCSS.css'
@@ -41,7 +47,16 @@ class App extends Component {
       addMembers: false,
     }
   }
-
+ 
+  renderContent = () => {
+    console.log(isMobile);
+    if(isMobile) {
+      return <EnviteIcon toggleWindow={this.handleToggle} changeInitialView={this.changeInitialView} /> 
+    }
+    else {
+      return <div></div>
+    }
+  }
   changeInitialView() {
     if (this.state.isGroupChat) {
       return <GroupContainer
@@ -302,10 +317,8 @@ class App extends Component {
 
         <div className="plugin__wrapper">
 
-          <EnviteIcon toggleWindow={this.handleToggle} />
-
+          {this.renderContent()}
           {this.changeInitialView()}
-
         </div>
 
 
