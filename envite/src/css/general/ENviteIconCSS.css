@@ -1,7 +1,6 @@
 .enviteIcon--wrapper {
-    position: fixed;
-    bottom: 5px;
-    right: 5px;
+    position: absolute;
+    bottom: 0;
 }
 .plugInIcon {
     width: 70px;

@@ -56,8 +56,14 @@ class App extends Component {
   }
 
   renderContent = () => {
-    if(isMobile) {
-      return <EnviteIcon toggleWindow={this.handleToggle} changeInitialView={this.changeInitialView} /> 
+    if (isMobile) {
+      return (
+        <div className="eNviteIcon__container">
+          <span className="eNviteIcon__moto">Shop With Friends</span>
+          <EnviteIcon toggleWindow={this.handleToggle} changeInitialView={this.changeInitialView} />
+        </div>
+
+      )
     }
     else {
       return <div></div>
@@ -94,7 +100,6 @@ class App extends Component {
 
   animationGroupDisappear = () => {
     let componentToAnimate = document.getElementById('groupChat__component');
-    console.log(componentToAnimate)
     componentToAnimate.style.opacity = 0;
   }
 
@@ -231,13 +236,14 @@ class App extends Component {
       this.setState({
         isExpanded: !this.state.isExpanded
       })
+      this.changeMessageCount();
     } else {
       setTimeout(() => {
         this.setState({
           isExpanded: !this.state.isExpanded
         })
       }, 100);
-      this.changeMessageCount();
+
       setTimeout(() => {
         this.disableScroll();
       }, 150);
