@@ -56,18 +56,13 @@ class App extends Component {
   }
 
   renderContent = () => {
-    if (isMobile) {
+   
       return (
         <div className="eNviteIcon__container">
           <span className="eNviteIcon__moto">Shop With Friends</span>
-          <EnviteIcon toggleWindow={this.handleToggle} changeInitialView={this.changeInitialView} />
+          <EnviteIcon toggleWindow={this.handleToggle} />
         </div>
-
       )
-    }
-    else {
-      return <div></div>
-    }
   }
 
   changeInitialView() {
