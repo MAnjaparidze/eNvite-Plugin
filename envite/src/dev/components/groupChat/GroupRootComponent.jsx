@@ -61,7 +61,7 @@ export default class GroupChat extends Component {
                     />
         }
         if (this.props.state.groupMemberBag) {
-            return <GroupMemberBagMidSection />
+            return <GroupMemberBagMidSection  />
         }
         if (this.props.state.addMember) {
             return <AddParticipantsMidSection />

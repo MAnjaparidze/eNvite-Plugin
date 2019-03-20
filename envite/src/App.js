@@ -35,6 +35,8 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      messageCount: null,
+      isMessage: false,
       isExpanded: false,
       showProfile: false,
       isGroupChat: false,
@@ -47,9 +49,13 @@ class App extends Component {
       addMembers: false,
     }
   }
- 
+
+  changeMessageCount = () => {
+    let messageCount = document.getElementsByClassName('groupChat__midSection__wrapper')[0];
+    console.log(messageCount);
+  }
+
   renderContent = () => {
-    console.log(isMobile);
     if(isMobile) {
       return <EnviteIcon toggleWindow={this.handleToggle} changeInitialView={this.changeInitialView} /> 
     }
@@ -57,6 +63,7 @@ class App extends Component {
       return <div></div>
     }
   }
+
   changeInitialView() {
     if (this.state.isGroupChat) {
       return <GroupContainer
@@ -68,6 +75,7 @@ class App extends Component {
         toGroup={this.goToGroup}
         groupMemberBag={this.goToGroupMemberBag}
         addMember={this.addMember}
+        checkMessages={this.changeMessageCount}
       />
     }
     else {
@@ -229,12 +237,12 @@ class App extends Component {
           isExpanded: !this.state.isExpanded
         })
       }, 100);
+      this.changeMessageCount();
       setTimeout(() => {
         this.disableScroll();
       }, 150);
       this.animationUserUtilAppear();
     }
-
   }
 
   signIn = () => {
